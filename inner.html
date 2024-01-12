@@ -25,7 +25,7 @@
       </div>
       <div class="content">
         <header class="header">
-          <h1 class="header__title">-</h1>
+          <h1 class="header__title"></h1>
           <div class="progress">
             <div class="progress__text">
               <div class="progress__name">Прогресс</div>
@@ -40,14 +40,19 @@
           <div id="days"></div>
           <div class="habbit">
             <div class="habbit__day">день</div>
-            <form class="habbit__form">
-              <input class="input_icon" type="text" placeholder="коментарий" />
+            <form class="habbit__form" onsubmit="addDays(event)">
+              <input
+                name="comment"
+                class="input_icon"
+                type="text"
+                placeholder="коментарий"
+              />
               <img
                 class="input__icon"
                 src="images/icons/coment_icon.svg"
                 alt=""
               />
-              <button class="habbit_button">готово</button>
+              <button class="habbit_button" type="submit">готово</button>
             </form>
           </div>
         </main>

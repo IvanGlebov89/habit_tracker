@@ -156,6 +156,12 @@ input {
   font-size: 14px;
   flex: 1;
 }
+input::placeholder {
+  color: #356c9b;
+}
+input.error {
+  border: 1px solid red;
+}
 .habbit__form {
   display: flex;
   /* justify-content: space-between; */
