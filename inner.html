@@ -18,7 +18,7 @@
         <img class="panel__logo" src="images/icons/habbit.svg" alt="" />
         <nav class="menu">
           <div class="menu__list"></div>
-          <button class="menu__add">
+          <button class="menu__add" onclick="tooglePopup()">
             <img src="images/icons/add.svg" alt="add" />
           </button>
         </nav>
@@ -56,6 +56,38 @@
             </form>
           </div>
         </main>
+      </div>
+      <div class="cover cover_hidden" id="add-habbit-popup">
+        <div class="popUp">
+          <h2 class="popUp_text">Новая привычка</h2>
+          <div class="icon-lable">Иконка</div>
+          <div class="icon-select">
+            <button class="icon icon_active" onclick="setIcon(this,'push')">
+              <img src="/images/icons/push.svg" alt="спорт" />
+            </button>
+            <button class="icon" onclick="setIcon(this, 'food')">
+              <img src="/images/icons/food.svg" alt="еда" />
+            </button>
+            <button class="icon" onclick="setIcon(this, 'water')">
+              <img src="/images/icons/water.svg" alt="пить" />
+            </button>
+          </div>
+          <form class="popUp__form" onsubmit="addHabbit(event)">
+            <input type="text" name="name" placeholder="название" />
+            <input
+              type="text"
+              name="icon"
+              hidden
+              value="sport"
+              placeholder="Иконка"
+            />
+            <input type="number" name="target" placeholder="цель" />
+            <button class="habbit_button" type="submit">добавить</button>
+          </form>
+          <button class="popUp_close" onclick="tooglePopup()">
+            <img src="/images/icons/delet_button.svg" alt="закрыть" />
+          </button>
+        </div>
       </div>
     </div>
     <script src="/scripts/main.js"></script>

@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "icon": "push_up",
+        "icon": "push",
         "name": "отжимания",
         "target":10,
         "days":[
